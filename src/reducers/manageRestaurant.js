@@ -12,9 +12,9 @@ export default function manageRestaurants(state = {
     case "DELETE_RESTAURANT":
       return Object.assign({}, state, {restaurants: state.restaurants.concat(action.restaurant)})
     case "ADD_REVIEW":
-      return Object.assign({}, state, {restaurants: state.restaurants.concat(action.restaurant)})
+      return Object.assign({}, state, {reviews: state.reviews.concat(action.review)})
     case "DELETE_REVIEW":
-      return state
+      return Object.assign({}, state, {reviews: state.reviews.concat(action.review)})
     default:
       return state
   }
