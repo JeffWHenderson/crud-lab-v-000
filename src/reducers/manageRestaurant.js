@@ -8,7 +8,7 @@ export default function manageRestaurants(state = {
 }, action) {
   switch (action.type) {
     case "ADD_RESTAURANT":
-      return [...state, action.restaurant]
+      return [...state, {action.restaurant}]
     case "DELETE_RESTAURANT":
       return Object.assign({}, state, {restaurants: state.restaurants.filter(res=> res.id !== action.id)})
     case "ADD_REVIEW":
